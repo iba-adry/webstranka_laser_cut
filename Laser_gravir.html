@@ -5,19 +5,103 @@
     <title>Moje hobby, môj laser</title>
 
     <style>
+        body {
+            background: #0F0F0F;
+        }
         /* Informacie o nadpise: font, farba, velkost
-         Informacie o pozadi, okrajoch*/
+         Informacie o pozadi, okrajoch */
         h1{
-            font-family: Arial, Helvetica, sans-serif;
-            color: rgb(105,4,51);
+            font-family: "Inter Semi Bold", "Helvetica", "sans-serif";
+            color: rgb(103, 79, 90);
             line-height: 3.5;
             text-align: center;
             font-weight: 900;
-            text-decoration: underline;
-            border-style: dotted;
-            border-color: rgb(105,4,51);
-            border-radius: 10px;
-            padding: 2px;
+            border-style: solid;
+            border-color: rgb(198, 187, 192);
+            padding: 10px;
+        }
+        h2 {
+            font-family: "Inter Semi Bold", "Helvetica", "sans-serif";
+            color: rgb(103, 79, 90);
+            text-align: center;
+            font-weight: 700;
+        }
+        .domov {
+            text-align: center;
+            color: rgb(227, 186, 205);
+            display: inline-block;
+            vertical-align: top;
+            width: 15%;
+            box-sizing: border-box;
+            list-style: disc inside;
+        }
+        .domov:hover {
+            color: #FF3B3B;
+        }
+        .o_projekte {
+            text-align: center;
+            color: rgb(227, 186, 205);
+            display: inline-block;
+            vertical-align: top;
+            width: 15%;
+            box-sizing: border-box;
+            list-style: disc inside;
+        }
+        .o_projekte:hover {
+            color: #FF3B3B;
+        }
+        .technologia {
+            text-align: center;
+            color: rgb(227, 186, 205);
+            display: inline-block;
+            vertical-align: top;
+            width: 15%;
+            box-sizing: border-box;
+            list-style: disc inside;
+        }
+        .technologia:hover {
+            color: #FF3B3B;
+        }
+        .galeria {
+            text-align: center;
+            color: rgb(227, 186, 205);
+            display: inline-block;
+            vertical-align: top;
+            width: 15%;
+            box-sizing: border-box;
+            list-style: disc inside;
+        }
+        .galeria:hover {
+            color: #FF3B3B;
+        }
+        .materialy {
+            text-align: center;
+            color: rgb(227, 186, 205);
+            display: inline-block;
+            vertical-align: top;
+            width: 15%;
+            box-sizing: border-box;
+            list-style: disc inside;
+        }
+        .materialy:hover {
+            color: #FF3B3B;
+        }
+        .objednavka {
+            text-align: center;
+            color: rgb(227, 186, 205);
+            display: inline-block;
+            vertical-align: top;
+            width: 15%;
+            box-sizing: border-box;
+            list-style: disc inside;
+        }
+        .objednavka:hover {
+            color: #FF3B3B;
+        }
+
+
+        article {
+            color: rgb(198, 187, 192);
         }
     </style>
 </head>
@@ -25,8 +109,27 @@
 <body>
     <header>
         <h1> <!-- Hlavicka - nadpis -->
-            Laser, môj únik od reality
+            Laser, únik od reality
         </h1>
+
+        <article class="domov">
+            Domov
+        </article>
+        <article class="o_projekte">
+            O projekte
+        </article>
+        <article class="technologia">
+            Technológia
+        </article>
+        <article class="galeria">
+            Galéria
+        </article>
+        <article class="materialy">
+            Materiály
+        </article>
+        <article class="objednavka">
+            Objednávka
+        </article>
 
         <article>
             <p>
@@ -66,7 +169,7 @@
     </header>
     <footer>
         <p>
-            iba_adry <br>
+            © iba_adry <br>
             2026
         </p>
     </footer>
