@@ -1,178 +1,152 @@
 <!DOCTYPE html>
 <html lang="sk">
+
 <head>
     <meta charset="UTF-8">
     <title>Moje hobby, môj laser</title>
 
     <style>
         body {
-            background: #0F0F0F;
+            background: #000000;
+            padding-right: 50px;
+            padding-left: 50px;
         }
-        /* Informacie o nadpise: font, farba, velkost
-         Informacie o pozadi, okrajoch */
-        h1{
-            font-family: "Inter Semi Bold", "Helvetica", "sans-serif";
+
+        /* Styles the home navigation item layout and appearance
+         Changes the text color when hovering over the home navigation item */
+        nav {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            width: 15%;
+            color: rgb(227, 186, 205);
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        nav li:hover {
             color: rgb(103, 79, 90);
+        }
+
+        /* Details about the heading: font, color, size
+        Details about the background and borders */
+        .hero {
+            /*Image added into the background */
+            background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)),
+            url("images/05.jpg");
+            background-size: cover;
+            background-position: center;
+            padding: 100px;
+
+            /* Header description */
+            font-family: "Inter Semi Bold", "Helvetica", "sans-serif";
+            color: rgb(198, 187, 192);
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
             line-height: 3.5;
             text-align: center;
             font-weight: 900;
-            border-style: solid;
-            border-color: rgb(198, 187, 192);
-            padding: 10px;
         }
+
         h2 {
             font-family: "Inter Semi Bold", "Helvetica", "sans-serif";
+            font-size: 22px;
             color: rgb(103, 79, 90);
             text-align: center;
             font-weight: 700;
         }
-        .domov {
-            text-align: center;
-            color: rgb(227, 186, 205);
-            display: inline-block;
-            vertical-align: top;
-            width: 15%;
-            box-sizing: border-box;
-            list-style: disc inside;
-        }
-        .domov:hover {
-            color: #FF3B3B;
-        }
-        .o_projekte {
-            text-align: center;
-            color: rgb(227, 186, 205);
-            display: inline-block;
-            vertical-align: top;
-            width: 15%;
-            box-sizing: border-box;
-            list-style: disc inside;
-        }
-        .o_projekte:hover {
-            color: #FF3B3B;
-        }
-        .technologia {
-            text-align: center;
-            color: rgb(227, 186, 205);
-            display: inline-block;
-            vertical-align: top;
-            width: 15%;
-            box-sizing: border-box;
-            list-style: disc inside;
-        }
-        .technologia:hover {
-            color: #FF3B3B;
-        }
-        .galeria {
-            text-align: center;
-            color: rgb(227, 186, 205);
-            display: inline-block;
-            vertical-align: top;
-            width: 15%;
-            box-sizing: border-box;
-            list-style: disc inside;
-        }
-        .galeria:hover {
-            color: #FF3B3B;
-        }
-        .materialy {
-            text-align: center;
-            color: rgb(227, 186, 205);
-            display: inline-block;
-            vertical-align: top;
-            width: 15%;
-            box-sizing: border-box;
-            list-style: disc inside;
-        }
-        .materialy:hover {
-            color: #FF3B3B;
-        }
-        .objednavka {
-            text-align: center;
-            color: rgb(227, 186, 205);
-            display: inline-block;
-            vertical-align: top;
-            width: 15%;
-            box-sizing: border-box;
-            list-style: disc inside;
-        }
-        .objednavka:hover {
-            color: #FF3B3B;
-        }
-
 
         article {
+            font-family: "Times New Roman", "Helvetica", "sans-serif";
+            font-size: 17px;
             color: rgb(198, 187, 192);
+            padding-left: 50px;
+            padding-right: 50px;
         }
+
     </style>
 </head>
 
 <body>
-    <header>
-        <h1> <!-- Hlavicka - nadpis -->
-            Laser, únik od reality
-        </h1>
+<nav>
+    <ul class="main_menu">
+        <li>Domov</li>
+        <li>O mne</li>
+        <li>Technológia</li>
+        <li>Galéria</li>
+        <li>Materiály</li>
+        <li>Objednávka</li>
+    </ul>
+</nav>
 
-        <article class="domov">
-            Domov
-        </article>
-        <article class="o_projekte">
-            O projekte
-        </article>
-        <article class="technologia">
-            Technológia
-        </article>
-        <article class="galeria">
-            Galéria
-        </article>
-        <article class="materialy">
-            Materiály
-        </article>
-        <article class="objednavka">
-            Objednávka
-        </article>
+<header>
+    <!-- Header - title -->
+    <h1 class="hero">
+        Laser, únik od reality
+    </h1>
+</header>
 
-        <article>
-            <p>
-                Laser a gravírovanie sú pre mňa hlavne formou odreagovania a kreatívneho oddychu. Je to činnosť, ktorá ma baví a pri ktorej viem vypnúť od bežných povinností. Rada skúšam nové nápady a malé projekty, vďaka ktorým môžem vytvoriť niečo originálne a praktické.
-            </p>
-            <p>
-                Používam hobby laser Sculpfun S10, ktorý síce nie je profesionálny, ale úplne mi postačuje na menšie zákazky a vlastnú tvorbu. Nepotrebujem výkon profesionálnych strojov, pretože sa zameriavam hlavne na drobné výrobky, ako sú napríklad obaly na fľaše, podpivníky alebo malé dekorácie.
-            </p>
-        </article>
-
-        <h2> <!-- 2 podnadpisy, rozdelenie na 2 kategorie -->
-            Gravír
-        </h2>
-
-        <article>
-            <p>
-                Gravírovanie slúži na vytváranie detailných vzorov, textov alebo obrázkov na rôznych materiáloch. Výsledný vzhľad gravíru závisí od nastavenia intenzity a sily lasera. Jemnejšie nastavenia vytvárajú svetlejší gravír, zatiaľ čo silnejšie nastavenia zanechávajú tmavší a výraznejší vzor.
-            </p>
-            <p>
-                Pri gravírovaní je dôležité experimentovať, aby výsledok vyzeral presne podľa predstáv. Každý materiál reaguje trochu inak, čo robí túto techniku zaujímavou a kreatívnou.
-            </p>
-        </article>
-
-        <h2>
-            Laser
-        </h2>
-
-        <article>
-            <p>
-                Laserové rezanie umožňuje presné vyrezávanie tvarov z rôznych materiálov. Laser si bez problémov poradí s materiálom o hrúbke 3 mm, ktorý prereže úplne hladko. Pri hrúbke 4 mm je rezanie už náročnejšie a vyžaduje vyššie nastavenia alebo viac opakovaní.
-            </p>
-            <p>
-                Aj napriek tomu je laser veľmi presný nástroj, ktorý umožňuje vytvárať čisté hrany a presné tvary. V kombinácii s gravírovaním vznikajú jedinečné výrobky, ktoré sú nielen estetické, ale aj funkčné.
-            </p>
-        </article>
-
-    </header>
-    <footer>
+<main>
+    <!-- Basic information about laser & engraving -->
+    <article>
         <p>
-            © iba_adry <br>
-            2026
+            Laser a gravírovanie sú pre mňa hlavne formou odreagovania a kreatívneho oddychu. Je to činnosť, ktorá ma
+            baví a pri ktorej viem vypnúť od bežných povinností. Rada skúšam nové nápady a malé projekty, vďaka ktorým
+            môžem vytvoriť niečo originálne a praktické.
         </p>
-    </footer>
+        <p>
+            Používam hobby laser Sculpfun S10, ktorý síce nie je profesionálny, ale úplne mi postačuje na menšie zákazky
+            a vlastnú tvorbu. Nepotrebujem výkon profesionálnych strojov, pretože sa zameriavam hlavne na drobné
+            výrobky, ako sú napríklad obaly na fľaše, podpivníky alebo malé dekorácie.
+        </p>
+    </article>
+
+    <h2> <!-- Two subheadings, divided into two categories -->
+        Gravír
+    </h2>
+
+    <article>
+        <p>
+            Gravírovanie slúži na vytváranie detailných vzorov, textov alebo obrázkov na rôznych materiáloch. Výsledný
+            vzhľad gravíru závisí od nastavenia intenzity a sily lasera. Jemnejšie nastavenia vytvárajú svetlejší
+            gravír, zatiaľ čo silnejšie nastavenia zanechávajú tmavší a výraznejší vzor.
+        </p>
+        <p>
+            Pri gravírovaní je dôležité experimentovať, aby výsledok vyzeral presne podľa predstáv. Každý materiál
+            reaguje trochu inak, čo robí túto techniku zaujímavou a kreatívnou.
+        </p>
+    </article>
+
+    <h2>
+        Laser
+    </h2>
+
+    <article>
+        <p>
+            Laserové rezanie umožňuje presné vyrezávanie tvarov z rôznych materiálov. Laser si bez problémov poradí s
+            materiálom o hrúbke 3 mm, ktorý prereže úplne hladko. Pri hrúbke 4 mm je rezanie už náročnejšie a vyžaduje
+            vyššie nastavenia alebo viac opakovaní.
+        </p>
+        <p>
+            Aj napriek tomu je laser veľmi presný nástroj, ktorý umožňuje vytvárať čisté hrany a presné tvary. V
+            kombinácii s gravírovaním vznikajú jedinečné výrobky, ktoré sú nielen estetické, ale aj funkčné.
+        </p>
+    </article>
+</main>
+<footer>
+    <p>
+        © iba_adry <br>
+        2026
+    </p>
+</footer>
 
 
 </body>
