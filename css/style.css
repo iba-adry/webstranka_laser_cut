@@ -105,7 +105,7 @@ footer {
     color: rgb(198, 187, 192);
 }
 
-/* GALERRY */
+/* GALLERY */
 
 .gallery {
     display: grid;
@@ -125,3 +125,35 @@ footer {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(103, 79, 90, 0.8);
 }
+
+/* ORDER */
+
+.container {
+    font-family: "Inter Semi Bold", "Helvetica", "sans-serif";
+    font-size: 16px;
+    color: rgb(198, 187, 192);
+    display: inside-block;
+    box-sizing: border-box;
+
+}
+.left, .right {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 48%;
+    vertical-align: middle;
+}
+
+button {
+    color: rgb(103, 79, 90);
+    font-size: 16px;
+    background-color: rgb(198, 187, 192);
+    width: 30%;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.button {
+    text-align: center;
+.button:hover {
+background-color: rgb(103, 79, 90);}
+}
+
