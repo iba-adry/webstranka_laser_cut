@@ -1,59 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Title</title>
-
-    <style>
-        /* Style applied to the entire page */
-        body {
-            background: #000000;
-            padding-right: 50px;
-            padding-left: 50px;
-        }
-
-        /* Styles the home navigation item layout and appearance
-         Changes the text color when hovering over the home navigation item */
-        nav {
-            text-align: center;
-            margin: 30px 0;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav li {
-            display: inline-block;
-            width: 15%;
-        }
-        nav a {
-            font-family: "Inter Semi Bold", "Helvetica", "sans-serif";
-            font-size: 17px;
-            color: rgb(227, 186, 205);
-            cursor: pointer;
-            text-decoration: none;
-        }
-        nav a:hover {
-            color: rgb(103, 79, 90);
-        }
-
-        article {
-            font-family: "Times New Roman", "Helvetica", "sans-serif";
-            font-size: 17px;
-            color: rgb(198, 187, 192);
-            padding-left: 50px;
-            padding-right: 50px;
-        }
-
-        footer {
-            font-family: "Inter Semi Bold", "Helvetica", "sans-serif";
-            font-size: 12px;
-            color: rgb(198, 187, 192);
-            text-align: center;
-            padding-top: 50px;
-        }
-    </style>
+    <!--    Link external CSS stylesheet to HTML pages-->
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
@@ -68,11 +22,155 @@
         </ul>
     </nav>
 
+    <header>
+        <!-- Header - title -->
+        <h1 class="hero">Objednávkový formulár</h1>
+    </header>
+
+    <div class="container">
+        <main>
+            <form id="order-form" novalidate>
+                <div class="left">
+                    <label for="name">Meno:</label>
+                    <input type="text" id="name" required>
+                </div>
+
+                <div class="right">
+                    <label for="surname">Priezvisko:</label>
+                    <input type="text" id="surname" required>
+                </div>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required placeholder="hello@hello.com">
+                </div>
+
+                <p></p>
+
+                <div class="left">
+                    <label for="product">Produkt:</label>
+                    <select id="product" required>
+                        <option value="">-- Vyber produkt --</option>
+                        <option value="obal">Obal</option>
+                        <option value="varecha">Varecha</option>
+                        <option value="doska">Doska na krájanie</option>
+                        <option value="other">Iné</option>
+                    </select>
+                </div>
+
+                <div class="right">
+                    <label for="type">Gravír:</label>
+                    <select id="type" required>
+                        <option value="">-- Vyber produkt --</option>
+                        <option value="gravir">Klasický gravír</option>
+                        <option value="fotografia">Fotografia</option>
+                    </select>
+
+                </div>
+
+                <article>
+                    <p>
+                        Svoje fotografie, prosím, zasielajte na "gravir@adry.sk".
+                    </p>
+                </article>
+
+                <div>
+                    <label for="quantity">Množstvo:</label>
+                    <input type="number" id="quantity" min="1" value="1" required>
+                </div>
+
+                <p></p>
+
+                <div class="left">
+                    <label for="address">Ulica:</label>
+                    <textarea id="address" required></textarea>
+                </div>
+
+                <div class="right">
+                    <label for="number">Číslo:</label>
+                    <input type="number" id="number" min="1" required>
+                </div>
+
+                <div class="left">
+                    <label for="psc">PSC:</label>
+                    <input type="text" id="psc" required pattern="[0-9]{3} ?[0-9]{2}" placeholder="900 01">
+                </div>
+
+                <div class="right">
+                    <label for="city">Mesto:</label>
+                    <input type="text" id="city" required>
+                </div>
+
+                <div>
+                    <label for="payment">Spôsob platby:</label>
+                    <select id="payment" required>
+                        <option value="">-- Vyber platbu --</option>
+                        <option value="karta">Platba kartou</option>
+                        <option value="dobierka">Dobierka</option>
+                        <option value="prevod">Bankový prevod</option>
+                    </select>
+                </div>
+
+                <p></p>
+
+                <div>
+                    <label for="note">Poznámka:</label>
+                    <textarea id="note"></textarea>
+                </div>
+
+                <p></p>
+
+                <div class="button">
+                    <button type="submit">Odoslať objednávku</button>
+                </div>
+
+            </form>
+        </main>
+        <article>
+            <h2>Informácie</h2>
+            <p>Objednávky spracujeme do 10 pracovných dní. V prípade ďalších otázok Vás budeme kontaktovať na Vami zvolený mail.</p>
+        </article>
+    </div>
+
+    </div>
+
 <footer>
     <p>
         © iba_adry <br>
         2026 &lt;3
     </p>
 </footer>
+
+
+    <script>
+        const form = document.getElementById('order-form');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Old errors removal
+            form.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
+
+            let valid = true;
+            const fields = ['name', 'surname', 'email', 'product', 'type', 'quantity', 'address', 'number', 'psc', 'city', 'payment'];
+
+            fields.forEach(id => {
+                const input = document.getElementById(id);
+                const wrapper = input.closest('div');
+
+                if (!input.checkValidity()) {
+                    input.classList.add('error');
+                    wrapper.classList.add('error');
+                    valid = false;
+                }
+            });
+
+            if (valid) {
+                alert('Objednávka bola úspešne odoslaná!');
+                form.reset();
+            }
+        });
+    </script>
+
 </body>
 </html>
