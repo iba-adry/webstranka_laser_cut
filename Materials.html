@@ -5,60 +5,10 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Title</title>
-
-    <style>
-        /* Style applied to the entire page */
-        body {
-            background: #000000;
-            padding-right: 50px;
-            padding-left: 50px;
-        }
-
-        /* Styles the home navigation item layout and appearance
-         Changes the text color when hovering over the home navigation item */
-        nav {
-            text-align: center;
-            margin: 30px 0;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav li {
-            display: inline-block;
-            width: 15%;
-        }
-        nav a {
-            font-family: "Inter Semi Bold", "Helvetica", "sans-serif";
-            font-size: 17px;
-            color: rgb(227, 186, 205);
-            cursor: pointer;
-            text-decoration: none;
-        }
-        nav a:hover {
-            color: rgb(103, 79, 90);
-        }
-
-        article {
-            font-family: "Times New Roman", "Helvetica", "sans-serif";
-            font-size: 17px;
-            color: rgb(198, 187, 192);
-            padding-left: 50px;
-            padding-right: 50px;
-        }
-
-        footer {
-            font-family: "Inter Semi Bold", "Helvetica", "sans-serif";
-            font-size: 12px;
-            color: rgb(198, 187, 192);
-            text-align: center;
-            padding-top: 50px;
-        }
-        </style>
-
-        </head>
+    <title>Materialy</title>
+    <!--    Link external CSS stylesheet to HTML pages-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
     <nav>
         <ul class="main_menu">
@@ -71,11 +21,35 @@
         </ul>
     </nav>
 
+    <main>
+
+        <header>
+            <!-- Header - title -->
+            <h1 class="hero">Dostupné materiály</h1>
+        </header>
+
+        <table id="materialsTable">
+            <thead>
+            <tr>
+                <th>Materiál</th>
+                <th>Typ</th>
+                <th>Výkon</th>
+                <th>Rýchlosť</th>
+                <th>Počet opakovaní</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+    </main>
+
 <footer>
     <p>
         © iba_adry <br>
         2026 &lt;3
     </p>
 </footer>
+    <script src="js/materials.js"></script>
 </body>
 </html>

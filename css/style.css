@@ -2,7 +2,7 @@
 
 /* Style applied to the entire page */
 body {
-    background: #000000;
+    background-color: black;
     padding-right: 50px;
     padding-left: 50px;
 }
@@ -55,7 +55,7 @@ Details about the background and borders */
 h2 {
     font-family: "Inter Semi Bold", "Helvetica", "sans-serif";
     font-size: 22px;
-    color: rgb(103, 79, 90);
+    color: rgb(172, 129, 149);
     text-align: center;
     font-weight: 700;
 }
@@ -132,7 +132,7 @@ footer {
     font-family: "Inter Semi Bold", "Helvetica", "sans-serif";
     font-size: 16px;
     color: rgb(198, 187, 192);
-    display: inside-block;
+    display: inline-block;
     box-sizing: border-box;
 
 }
@@ -157,3 +157,40 @@ button {
 background-color: rgb(103, 79, 90);}
 }
 
+/* MATERIALS */
+
+/* Materials table styling */
+#materialsTable {
+    width: 100%;
+    border-collapse: separate;
+    overflow: hidden;
+    border-spacing: 0;
+    border-radius: 10px;
+    margin-top: 30px;
+    background-color: rgb(213, 187, 196);
+}
+
+/* Table header and cells */
+#materialsTable th,
+#materialsTable td {
+    border: 2px solid rgb(64, 26, 42);
+    padding: 12px;
+    text-align: center;
+}
+
+/* Header row */
+#materialsTable th {
+    background-color: rgb(64, 26, 42);
+    color: rgb(227, 186, 205);
+    font-weight: bold;
+}
+
+/* Zebra rows */
+#materialsTable tr:nth-child(even) {
+    background-color: rgb(227, 186, 205);
+}
+
+/* Hover effect */
+#materialsTable tr:hover {
+    background-color: rgb(103, 79, 90);
+}

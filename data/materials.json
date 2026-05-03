@@ -1,0 +1,39 @@
+{
+  "materials": [
+    {
+      "name": "Drevo",
+      "types": [
+        {
+          "type": "Preglejka - 3 mm",
+          "settings": {
+            "power": "100%",
+            "speed": "400 mm/min",
+            "repetitions": "1"
+          }
+        },
+        {
+          "type": "Preglejka - 4 mm",
+          "settings": {
+            "power": "100%",
+            "speed": "200 mm/min",
+            "repetitions": "2"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Plast",
+      "types": [
+        {
+          "type": "Akryl - 2 mm",
+          "settings": {
+            "power": "50%",
+            "speed": "1500 mm/min",
+            "repetitions": "1"
+          }
+        }
+
+      ]
+    }
+  ]
+}

@@ -30,15 +30,12 @@
     <div class="container">
         <main>
             <form id="order-form" novalidate>
-                <div class="left">
-                    <label for="name">Meno:</label>
+                <div>
+                    <label for="name">Meno a priezvisko:</label>
                     <input type="text" id="name" required>
                 </div>
 
-                <div class="right">
-                    <label for="surname">Priezvisko:</label>
-                    <input type="text" id="surname" required>
-                </div>
+                <p></p>
 
                 <div>
                     <label for="email">Email:</label>
@@ -47,7 +44,7 @@
 
                 <p></p>
 
-                <div class="left">
+                <div>
                     <label for="product">Produkt:</label>
                     <select id="product" required>
                         <option value="">-- Vyber produkt --</option>
@@ -58,19 +55,23 @@
                     </select>
                 </div>
 
-                <div class="right">
+                <p></p>
+
+                <div>
                     <label for="type">Gravír:</label>
                     <select id="type" required>
                         <option value="">-- Vyber produkt --</option>
+                        <option value="none">Bez graviru</option>
                         <option value="gravir">Klasický gravír</option>
                         <option value="fotografia">Fotografia</option>
+                        <option value="both">Obe</option>
                     </select>
 
                 </div>
 
                 <article>
                     <p>
-                        Svoje fotografie, prosím, zasielajte na "gravir@adry.sk".
+                        Svoje fotografie, prosím, zasielajte na "gravir@xyz.sk".
                     </p>
                 </article>
 
@@ -91,6 +92,8 @@
                     <input type="number" id="number" min="1" required>
                 </div>
 
+                <p></p>
+
                 <div class="left">
                     <label for="psc">PSC:</label>
                     <input type="text" id="psc" required pattern="[0-9]{3} ?[0-9]{2}" placeholder="900 01">
@@ -100,6 +103,8 @@
                     <label for="city">Mesto:</label>
                     <input type="text" id="city" required>
                 </div>
+
+                <p></p>
 
                 <div>
                     <label for="payment">Spôsob platby:</label>
@@ -131,9 +136,6 @@
             <p>Objednávky spracujeme do 10 pracovných dní. V prípade ďalších otázok Vás budeme kontaktovať na Vami zvolený mail.</p>
         </article>
     </div>
-
-    </div>
-
 <footer>
     <p>
         © iba_adry <br>
